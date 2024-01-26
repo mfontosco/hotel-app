@@ -86,12 +86,10 @@ const HotelEditForm = () => {
                 setFormData({ ...formData, country: e.target.value })
               }
             >
-              <option value=''>Select Country</option>
-              {countries.map((country, index) => (
-                <option key={country.geonameid} value={country.geonameid} >
-                  {country.country}
-                </option>
-              ))}
+             <option value=''>Select Country</option>
+                {[...new Set(countries.map(country => country.country))].map((country, index) => (
+                  <option key={index} value={country}>{country}</option>
+                ))}
             </select>
           </div>
           <div>

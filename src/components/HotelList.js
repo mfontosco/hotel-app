@@ -29,11 +29,11 @@ const HotelList = () => {
  <table class="w-full table-auto mt-10 ">
   <thead>
     <tr className=''>
-      <th className='border border-black py-3 px-3'> Name</th>
-      <th className='border border-black py-3 px-3'>Country</th>
-      <th className='border border-black py-3 px-3'> Category</th>
-      <th className='border border-black py-3 px-3'>Address</th>
-      <th className='border border-black py-3 px-3'> Actions</th>
+      <th className=' py-3 px-3'> Name</th>
+      <th className=' py-3 px-3'>Country</th>
+      <th className=' py-3 px-3'> Category</th>
+      <th className=' py-3 px-3'>Address</th>
+      <th className=' py-3 px-3'> Actions</th>
   
     </tr>
   </thead>

@@ -20,19 +20,19 @@ const HotelItem = ({ hotel }) => {
     
      
       <tr className='py-3 w-full border '>
-      <td className=' border border-black text-center py-3'>
+      <td className='  text-center py-3'>
         {hotel.name}
       </td>
-      <td className=' border border-black text-center py-3'>
+      <td className='  text-center py-3'>
         {hotel.country}
       </td>
-      <td className=' border border-black text-center py-3'>
+      <td className='  text-center py-3'>
         {hotel.category}
       </td>
-      <td className=' border border-black text-center py-3'>
+      <td className='  text-center py-3'>
         {hotel.address}
       </td>
-      <td className=' border border-black text-center py-3 flex justify-center gap-2 items-center'>
+      <td className='  text-center py-3 flex justify-center gap-2 items-center'>
       <button className=' px-2 font-semibold py-1' onClick={()=>(nav(`/hotel/edit/${hotel.id}`))}><FaEdit size={24}  className="text-blue-400"/></button>
       <button className=' px-2  font-semibold py-1' onClick={handleDelete}><MdDeleteOutline size={24} className="text-red-400" /></button>
       </td>

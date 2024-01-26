@@ -9,3 +9,10 @@
     background-color:light-gray;
     font-family: 'Poppins', sans-serif;
 }
+
+.backgroundImage{
+    background-image:url("./assests/hotelapp.jpg");
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}

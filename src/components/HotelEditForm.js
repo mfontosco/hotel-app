@@ -41,13 +41,13 @@ const HotelEditForm = () => {
     dispatch(editHotel({ id: parseInt(id), ...formData }));
     // Reset form
     setFormData({ name: '', country: '', category: '', address: '' });
-    nav("/");
+    nav("/hotel-list");
   };
   
 
   return (
    <div>
-   <div className="flex justify-end px-4 mt-4">
+   <div className="flex justify-end px-4 mt-2">
         <button className="bg-blue-500 text-white rounded-md px-4 py-2 md:mt-10" onClick={() => nav(-1)}>Back</button>
       </div>
      <div className='w-full flex justify-center'>
@@ -110,10 +110,10 @@ const HotelEditForm = () => {
                 setFormData({ ...formData, category: e.target.value })
               }
             >
-              <option value=''>Select Category</option>
-                <option  value="Star1">Star1</option>
-                <option  value="Star2">Star2</option>
-                <option  value="Star3">Star3</option>
+             <option value=''>Select Category</option>
+                <option value="1 Star">1 Star</option>
+                <option value="2 Star">2 Star</option>
+                <option value="3 Star">3 Star</option>
             </select>
           </div>
           <div className='mb-6'>

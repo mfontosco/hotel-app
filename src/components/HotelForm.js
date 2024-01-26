@@ -3,6 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addHotel } from '../redux/actions/hotelActions';
 import { getCountriesAction } from '../redux/actions/countriesActions';
 import { useNavigate } from 'react-router-dom';
+import Toast from './ToastContainer';
+import {toast} from 'react-toastify'
+
 
 const HotelForm = () => {
   const dispatch = useDispatch();
@@ -23,15 +26,18 @@ const HotelForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Validation logic
-    dispatch(addHotel({ id: Date.now(),...formData})); // Sending formData directly
+    dispatch(addHotel({ id: Date.now(),...formData})); 
     // Reset form
+    
     setFormData({ name: '', country: '', address: '', category: '' });
-    nav("/");
+    nav("/hotel-list");
+    toast.success('Hotel created successfully');
   };
 
   return (
     <div className=''>
-      <div className="flex justify-end px-4 mt-4">
+    <Toast/>
+      <div className="flex justify-end px-4 mt-2">
         <button className="bg-blue-500 text-white rounded-md px-4 py-2 md:mt-10" onClick={() => nav(-1)}>Back</button>
       </div>
       <div className='w-full flex justify-center '>
@@ -97,9 +103,9 @@ const HotelForm = () => {
                 required
               >
                 <option value=''>Select Category</option>
-                <option value="Star1">Star1</option>
-                <option value="Star2">Star2</option>
-                <option value="Star3">Star3</option>
+                <option value="1 Star">1 Star</option>
+                <option value="2 Star">2 Star</option>
+                <option value="3 Star">3 Star</option>
               </select>
             </div>
             <div className='mb-6'>
@@ -126,7 +132,7 @@ const HotelForm = () => {
                 className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
                 type='submit'
               >
-                Create Hotel
+                Create
               </button>
             </div>
           </form>

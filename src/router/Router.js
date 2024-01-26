@@ -1,11 +1,13 @@
 import React from 'react'
 import { Route,Routes } from 'react-router-dom'
 import {HotelList,HotelForm,CategoryList, CategoryEditForm, HotelEditForm} from './index'
+import Home from '../components/Home'
 
 const Router = () => {
   return (
     <Routes>
-         <Route path="/" exact element={<HotelList/>} />
+    <Route path="/" exact element={<Home/>} />
+         <Route path="/hotel-list" exact element={<HotelList/>} />
           <Route path="/hotels/add" element={<HotelForm/>} />
           <Route path="/categories" element={<CategoryList/>} />
 

@@ -25,11 +25,11 @@ const HotelList = () => {
   <button className="bg-blue-500 text-white rounded-md px-4 py-2" onClick={()=>nav("/hotels/add")}>Add New</button>
 </div>
 
- <div className='overflow-x-auto rounded-md'>
- <table class="w-full table-auto mt-10 ">
-  <thead>
-    <tr className=''>
-      <th className=' py-3 px-3'> Name</th>
+ <div className='overflow-x-auto rounded-md  mt-3'>
+ <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+  <thead className='text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400'>
+    <tr className='bg-gray-200 text-center'>
+      <th className=' py-3 px-3 '> Name</th>
       <th className=' py-3 px-3'>Country</th>
       <th className=' py-3 px-3'> Category</th>
       <th className=' py-3 px-3'>Address</th>
@@ -37,8 +37,8 @@ const HotelList = () => {
   
     </tr>
   </thead>
-  <tbody> 
-  {searchQuery ? filteredHotels.map((hotel) => <HotelItem key={hotel.id} hotel={hotel} />) : hotels.map((hotel) => <HotelItem key={hotel.id} hotel={hotel} />)}
+  <tbody className=''> 
+  {searchQuery ? filteredHotels.map((hotel,index) => <HotelItem key={hotel.id} hotel={hotel} index={index} />) : hotels.map((hotel,index) => <HotelItem key={hotel.id} hotel={hotel} />)}
   </tbody>
 </table>
  </div>

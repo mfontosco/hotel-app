@@ -26,6 +26,7 @@ const HotelForm = () => {
     dispatch(addHotel({ id: Date.now(), ...formData }));
     // Reset form
     setFormData({ name: '', country: '', address: '' });
+    nav("/")
   };
 
   return (
@@ -57,6 +58,7 @@ const HotelForm = () => {
               onChange={(e) =>
                 setFormData({ ...formData, name: e.target.value })
               }
+              required
             />
           </div>
           <div className='mb-6'>
@@ -72,6 +74,7 @@ const HotelForm = () => {
               onChange={(e) =>
                 setFormData({ ...formData, country: e.target.value })
               }
+              required
             >
               <option value=''>Select Country</option>
               {[...new Set(countries.map(country => country.country))].map((country, index) => (
@@ -92,6 +95,7 @@ const HotelForm = () => {
               onChange={(e) =>
                 setFormData({ ...formData, category: e.target.value })
               }
+              required
             >
               <option value=''>Select Category</option>
               <option value="Star1">Star1</option>
@@ -115,6 +119,7 @@ const HotelForm = () => {
               onChange={(e) =>
                 setFormData({ ...formData, address: e.target.value })
               }
+              required
             />
           </div>
           <div className='flex items-center justify-between'>

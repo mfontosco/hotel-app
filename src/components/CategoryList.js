@@ -10,6 +10,7 @@ const CategoryList = () => {
     <div className='flex justify-center flex-col items-center py-8'>
       <h2 className='text-2xl font-bold mb-4'>Categories List</h2>
       <CategoryForm />
+      
       <table class="w-[70%] table-auto mt-10">
   <thead>
     <tr className=''>

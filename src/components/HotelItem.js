@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 const HotelItem = ({ hotel }) => {
   const dispatch = useDispatch();
   const nav = useNavigate()
-  console.log(hotel)
+  console.log("hote------------>",hotel)
 
   const handleDelete = () => {
     if (window.confirm('Are you sure you want to delete this hotel?')) {

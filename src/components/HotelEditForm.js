@@ -40,14 +40,18 @@ const HotelEditForm = () => {
     // Dispatch action to edit hotel data
     dispatch(editHotel({ id: parseInt(id), ...formData }));
     // Reset form
-    
     setFormData({ name: '', country: '', category: '', address: '' });
     nav("/");
   };
   
 
   return (
-    <div className='w-full flex justify-center'>
+   <div>
+   <div className="flex justify-end px-4 mt-4">
+        <button className="bg-blue-500 text-white rounded-md px-4 py-2 md:mt-10" onClick={() => nav(-1)}>Back</button>
+      </div>
+     <div className='w-full flex justify-center'>
+     
       <div className='w-full min-w-xs flex flex-col items-center justify-center mt-10'>
         <h2 className='text-2xl'>Hotel Form</h2>
         <form
@@ -141,6 +145,7 @@ const HotelEditForm = () => {
         </form>
       </div>
     </div>
+   </div>
   );
 };
 

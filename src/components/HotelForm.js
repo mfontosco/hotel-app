@@ -23,7 +23,7 @@ const HotelForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Validation logic
-    dispatch(addHotel(formData)); // Sending formData directly
+    dispatch(addHotel({ id: Date.now(),...formData})); // Sending formData directly
     // Reset form
     setFormData({ name: '', country: '', address: '', category: '' });
     nav("/");
@@ -32,7 +32,7 @@ const HotelForm = () => {
   return (
     <div className=''>
       <div className="flex justify-end px-4 mt-4">
-        <button className="bg-blue-500 text-white rounded-md px-4 py-2" onClick={() => nav(-1)}>Back</button>
+        <button className="bg-blue-500 text-white rounded-md px-4 py-2 md:mt-10" onClick={() => nav(-1)}>Back</button>
       </div>
       <div className='w-full flex justify-center '>
         <div className='w-full min-w-xs flex flex-col items-center justify-center mt-10'>

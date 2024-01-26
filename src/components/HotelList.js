@@ -9,7 +9,7 @@ const HotelList = () => {
   const [searchQuery, setSearchQuery] = useState("")
   const nav = useNavigate()
 
- console.log("hotels",hotels)
+ console.log("hotels8888888888888",hotels)
     const filteredHotels = hotels.filter((hotel) =>hotel.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
     console.log("filter",filteredHotels)
